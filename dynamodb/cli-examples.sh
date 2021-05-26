@@ -7,7 +7,11 @@ aws dynamodb scan
   --region us-east-1
 
 # Demo Filter Expression
-aws dynamodb scan --table-name UserPosts --filter-expression "user_id = :u" --expression-attribute-values '{ ":u": {"S":"124usersoi3"}}' --region us-east-1
+aws dynamodb scan 
+  --table-name UserPosts 
+  --filter-expression "user_id = :u" 
+  --expression-attribute-values '{ ":u": {"S":"124usersoi3"}}' 
+  --region us-east-1
 
 # Page Size demo: will do 1 API call if you have 3 Items
 aws dynamodb scan --table-name UserPosts --region us-east-1
